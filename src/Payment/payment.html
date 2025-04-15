@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search For Properties</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="../../assets/css/utilities.css" />
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+<div class="dashboard-container">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../../dashboard/owner/index.html" class="nav-item">
+        <span class="nav-icon">📊</span>
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a href="../../information/properties/index.html" class="nav-item active">
+        <span class="nav-icon">🏘️</span>
+        <span class="nav-text">Properties</span>
+      </a>
+      <a href="../request/index.html" class="nav-item">
+        <span class="nav-icon">📋</span>
+        <span class="nav-text">Job Requests</span>
+      </a>
+      <a href="../../notifications/owner/index.html" class="nav-item">
+        <span class="nav-icon">🔔</span>
+        <span class="nav-text">Notifications</span>
+      </a>
+      <a href="../../profiles/owner/index.html" class="nav-item">
+        <span class="nav-icon">👤</span>
+        <span class="nav-text">Profile</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-text">Settings</span>
+      </a>
+      <a href="../../auth/login.html" class="nav-item">
+        <span class="nav-icon">🚪</span>
+        <span class="nav-text">Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-nav">
+      <div class="search-bar">
+        <label>
+          <input type="text" placeholder="Search..." />
+        </label>
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="user-menu">
+        <div class="notifications">
+          <button class="notification-btn">🔔</button>
+        </div>
+        <div class="user-profile">
+          <img src="../../assets/images/users/home-owner.jpeg" alt="User Avatar" />
+          <span>Cassy Mills</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="payment-container">
+        <h2>Payment Simulation</h2>
+        <form id="paymentForm">
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="netBanking">Net Banking</option>
+                <option value="emi">EMI</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+
+            <div id="cardDetails" style="display: block;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number">
+                <label for="expiry">Expiry (MM/YY):</label>
+                <input type="text" id="expiry" placeholder="MM/YY">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="CVV">
+            </div>
+
+            <div id="upiDetails" style="display: none;">
+                <label for="upiId">UPI ID:</label>
+                <input type="text" id="upiId" placeholder="Enter UPI ID">
+            </div>
+
+            <div id="netBankingDetails" style="display: none;">
+                <label for="bankSelect">Select Bank:</label>
+                <select id="bankSelect">
+                    <option value="sbi">SBI</option>
+                    <option value="icici">ICICI</option>
+                    <option value="hdfc">HDFC</option>
+                </select>
+            </div>
+
+            <div id="emiDetails" style="display: none;">
+                <label for="emiMonths">EMI Months:</label>
+                <select id="emiMonths">
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="12">12 Months</option>
+                </select>
+            </div>
+
+            <button type="button" id="payButton">Pay Now</button>
+        </form>
+        <div id="paymentResult"></div>
+    </div>
+    </main>
+</div>
+<script src="payment.js"></script>
+</body>
+</html>

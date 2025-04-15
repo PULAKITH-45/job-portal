@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search For Properties</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="../../assets/css/utilities.css" />
+  <link rel="stylesheet" href="properties.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="dashboard-container">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../../dashboard/owner/index.html" class="nav-item">
+        <span class="nav-icon">📊</span>
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a href="../../information/properties/index.html" class="nav-item active">
+        <span class="nav-icon">🏘️</span>
+        <span class="nav-text">Properties</span>
+      </a>
+      <a href="../request/index.html" class="nav-item">
+        <span class="nav-icon">📋</span>
+        <span class="nav-text">Job Requests</span>
+      </a>
+      <a href="../../notifications/owner/index.html" class="nav-item">
+        <span class="nav-icon">🔔</span>
+        <span class="nav-text">Notifications</span>
+      </a>
+      <a href="../../profiles/owner/index.html" class="nav-item">
+        <span class="nav-icon">👤</span>
+        <span class="nav-text">Profile</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-text">Settings</span>
+      </a>
+      <a href="../../auth/login.html" class="nav-item">
+        <span class="nav-icon">🚪d</span>
+        <span class="nav-text">Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-nav">
+      <div class="search-bar">
+        <label>
+          <input type="text" placeholder="Search..." />
+        </label>
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="user-menu">
+        <div class="notifications">
+          <button class="notification-btn">🔔</button>
+        </div>
+        <div class="user-profile">
+          <img src="../../assets/images/users/home-owner.jpeg" alt="User Avatar" />
+          <span>Cassy Mills</span>
+        </div>
+      </div>
+    </header><div class="property-container" id="property-container">
+      <img id="property-image" src="" alt="Property Image" />
+      <h2 id="property-title"></h2>
+      <p><strong>Location:</strong> <span id="property-location"></span></p>
+      <p><strong>Price:</strong> <span id="property-price"></span></p>
+
+      <div class="property-section">
+        <h3>Description</h3>
+        <p id="property-description"></p>
+      </div>
+
+      <div class="property-section">
+        <h3>Features</h3>
+        <ul class="features-list" id="property-features"></ul>
+      </div>
+
+      <div class="property-section">
+        <h3>Reviews</h3>
+        <div id="property-reviews"></div>
+      </div>
+
+      <div class="action-buttons">
+        <button onclick="location.href='../Payment/payment.htmll'" class="buy-btn">Buy</button>
+        <button onclick="location.href='../Payment/payment.html'" class="rent-btn">Rent</button>
+      </div>
+    </div>
+
+    <script src="property-details.js"></script>
+  </body>
+</html>

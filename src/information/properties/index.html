@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search For Properties</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="../../assets/css/utilities.css" />
+  <link rel="stylesheet" href="properties.css" />
+</head>
+<body>
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../../dashboard/owner/index.html" class="nav-item">
+        <span class="nav-icon">📊</span>
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a href="../../information/properties/index.html" class="nav-item active">
+        <span class="nav-icon">🏘️</span>
+        <span class="nav-text">Properties</span>
+      </a>
+      <a href="../request/index.html" class="nav-item">
+        <span class="nav-icon">📋</span>
+        <span class="nav-text">Job Requests</span>
+      </a>
+      <a href="../../notifications/owner/index.html" class="nav-item">
+        <span class="nav-icon">🔔</span>
+        <span class="nav-text">Notifications</span>
+      </a>
+      <a href="../../profiles/owner/index.html" class="nav-item">
+        <span class="nav-icon">👤</span>
+        <span class="nav-text">Profile</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-text">Settings</span>
+      </a>
+      <a href="../../auth/login.html" class="nav-item">
+        <span class="nav-icon">🚪</span>
+        <span class="nav-text">Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="top-nav">
+      <div class="search-bar">
+        <label>
+          <input type="text" placeholder="Search..." />
+        </label>
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="user-menu">
+        <div class="notifications">
+          <button class="notification-btn">🔔</button>
+        </div>
+        <div class="user-profile">
+          <img src="../../assets/images/users/home-owner.jpeg" alt="User Avatar" />
+          <span>Cassy Mills</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Property Search Section -->
+    <section class="property-search-box">
+      <h2>Search For Propety</h2>
+      <form id="search-form" class="search-form">
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="Enter state" />
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="Enter city" />
+        </div>
+        <div class="form-group">
+          <label for="budget">Select Budget</label>
+          <select id="budget">
+            <option value="no-budget">No Budget</option>
+            <option value="10-25">₹10,00,000 - ₹25,00,000</option>
+            <option value="25-50">₹25,00,000 - ₹50,00,000</option>
+            <option value="50-75">₹50,00,000 - ₹75,00,000</option>
+            <option value="75-100">₹75,00,000 - ₹1,00,00,000</option>
+            <option value="100+">₹1 Crore and Above</option>
+          </select>     
+        </div> 
+        <button id="searchButton" type="submit" class="searchButton-btn">Search</button>
+      </form>
+    </section>
+
+
+
+    <!-- Property Search Results Section -->
+    <section id="results" class="search-results"></section>
+    
+        
+    
+      
+  </main>
+</div>
+
+<!-- Link to External JavaScript File -->
+<script src="properties.js"></script>
+
+<!-- Inline Script to Hook Form Submit -->
+<script>
+  document.getElementById("search-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    searchProperties(); // Defined in properties.js
+  });
+</script>
+</body>
+</html>

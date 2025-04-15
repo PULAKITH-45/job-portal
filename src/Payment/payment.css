@@ -1,0 +1,96 @@
+@import url('../../dashboard/owner/dashboard.css');
+
+/* Property Search Box Styles */
+.property-search-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.property-search-box h2 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+/* Search Form Layout */
+.search-form {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.searchButton-btn {
+  background-color: #2563eb; /* Original blue */
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem; /* Added font size for better readability */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.searchButton-btn:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+  transform: scale(1.03);    /* Slight scaling for a subtle effect */
+}
+
+/* Sidebar Active Item Fix */
+.sidebar-item.active {
+  background-color: #7c3aed !important; /* Purple highlight */
+  color: white !important;
+  border-radius: 8px;
+}
+
+.sidebar-item.active span,
+.sidebar-item.active img {
+  color: white !important;
+  filter: brightness(0) invert(1); /* Makes icon white */
+}
+
+.payment-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
